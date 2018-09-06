@@ -12,6 +12,3 @@
 
 
 
-
-<h3>Contacto</h3>
- Alejandro Gutiérrez. *at:* [Correo de UABC](https://mail.google.com/mail/u/0/?view=cm&fs=1&to=alejandro.gutierrez.duran@uabc.edu.mx&su=SUBJECT&body=BODY)
