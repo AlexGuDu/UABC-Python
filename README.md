@@ -11,4 +11,4 @@
 - [Proramacion Orientada a Objetos en Python](https://drive.google.com/open?id=1soK3WJkzCkgZ_AFHImfbyCr2Zg96xchG)
 
 <h3>Contacto</h3>
-Alejandro Gutiérrez. *at:* [alejandro.gutierrez.duran@uabc.edu.mx](https://mail.google.com/mail/u/0/?view=cm&fs=1&to=alejandro.gutierrez.duran@uabc.edu.mx&su=SUBJECT&body=BODY)
+ Alejandro Gutiérrez. *at:* [dgutierrezalex@gmail.com](https://mail.google.com/mail/u/0/?view=cm&fs=1&to=dgutierrezalex@gmail.com&su=SUBJECT&body=BODY)
