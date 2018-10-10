@@ -1,4 +1,4 @@
-<p align="center"><img src="/pylogo.png" height="150px" width="150px"></p>
+<p align="center"><img src="readme+/pylogo.png" height="150px" width="150px"></p>
 <h1 align="center">Programación en Python</h1>
 <p align="center">Practicas y tareas de la materia Programacion en Python</p>
 <p><h3>Enlaces de Tareas</h3></p>
