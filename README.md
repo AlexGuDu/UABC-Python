@@ -12,4 +12,4 @@
 
 <b>Segundo Parcial</b>   <img src="readme+/dj.png" height="15px" width="15px">
 - [Instalación de Django y Creación de Proyecto](https://drive.google.com/file/d/1KuYnKsHkOGSArP8z9ElwabJl8rSQW3b6/view)
-- [Creación de App y Configuración](https://drive.google.com/file/d/1vtJ4ft2wGCbaQiwLvA_dtdzzLfUKJhHN/view)
+- [Creación de App y Configuración](https://drive.google.com/file/d/1fmL-JIGcgK3V_KzKXtjVQ898jBeKiw8b/view)
