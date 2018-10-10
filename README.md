@@ -11,3 +11,4 @@
 - [Programacion Orientada a Objetos en Python](https://drive.google.com/open?id=1soK3WJkzCkgZ_AFHImfbyCr2Zg96xchG)
 
 <b>Segundo Parcial</b>   <img src="readme+/dj.png" height="15px" width="15px">
+- [Instalacion de Django y Creacion de Proyecto](https://drive.google.com/file/d/1KuYnKsHkOGSArP8z9ElwabJl8rSQW3b6/view)
