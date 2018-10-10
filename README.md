@@ -3,7 +3,7 @@
 <p align="center">Practicas y tareas de la materia Programacion en Python</p>
 <p><h3>Enlaces de Tareas</h3></p>
 
- <b>Primer Parcial</b> <img src="readme+/py.png" height="12px" width="12px">
+ <b>Primer Parcial</b> <img src="readme+/py.png" height="15px" width="15px">
 - [Ambiente Virtual Python](https://drive.google.com/open?id=1bTmvgCMVrxyAJB2Us5iCsKWob4-Tir6A)
 - [Tipos de Datos](https://drive.google.com/open?id=1iNdxHFm8dS-ilK-PadzvpW0R4_lBzinw)
 - [Estructuras de Control e Iteracion](https://drive.google.com/open?id=1AvAEwKSBe1vACzmHaJaSKMZCw8sxzBjg)
