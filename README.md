@@ -14,3 +14,4 @@
 - [Instalación de Django y Creación de Proyecto](https://drive.google.com/file/d/1KuYnKsHkOGSArP8z9ElwabJl8rSQW3b6/view)
 - [Creación de App y Configuración](https://drive.google.com/file/d/1EhpR1pd1Nkk4sFIp9qhK7R6i9rDJl4Zn/view)
 - [Configuración de Rutas y Creación de Vistas](https://drive.google.com/file/d/15sWn4rqwh6EOqxcQoXyVtOj0qXez0tUc/view)
+- [Creación de Modelos](https://drive.google.com/file/d/1BRLHUo9ciLvbAz1OEcNt3TBHTLzwk441/view)
