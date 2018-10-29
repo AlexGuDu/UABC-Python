@@ -1,0 +1,16 @@
+{% extends 'sci_papers/layout.html' %}
+
+{% block content %}
+<h3 class="center-align red lighten-5" style="border-radius: 50px; padding: 10px;">{{paper.title}}</h3>
+
+<div class="card">
+  <div class="card-content">
+    {{paper.body}}
+  </div>
+  <div class="card-action">
+    {{paper.created_at}}
+    <div style="float:right"><label>{{paper.author}}</label></div>
+  </div>
+</div>
+<a href="/papers/{{cat}}" class="btn">Go back to Latest Papers</a>
+{% endblock %}

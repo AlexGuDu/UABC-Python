@@ -1,0 +1,27 @@
+{% extends 'sci_papers/layout.html' %}
+
+{% block content %}
+
+<ul class="collection with-header">
+  <li class="collection-header grey lighten-3"><h4>{{title}}</h4></li>
+  {% if papers is None %}
+    <li class="collection-item"><h3>No papers have been made in this field yet!</h3></li>
+  {% else %}
+  {% for paper in papers %}
+    <li class="collection-item"><a class="collection-item" href="/papers/details/{{paper.id}}">{{paper.title}}  <label style="float:right;">{{paper.author}}</label> </a></li>
+
+  {% endfor %}
+  {% endif %}
+</ul>
+
+<br>
+<div class="row ">
+  <div class="col s5 "><a style="display:block" class="center-align waves-effect waves-light btn col s6" href="/create">Submit a new paper</a></div>
+</div>
+<div class="row">
+  <div class="col s1">
+    <a style="display:block" class="center-align" href="/admin">Admin Login</a>
+  </div>
+</div>
+
+{% endblock %}
