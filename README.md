@@ -18,5 +18,5 @@
 - [Plantillas y Estilos](https://drive.google.com/file/d/1le5LlNkrP4UNG4AxOAKWEZ302bMVH9nJ/view)
 
 
-<b>Segundo Parcial</b>
+<b>Examen #2</b>
 - [Tabla de Categorias para Problema #1 de Examen #2](https://drive.google.com/file/d/1nDX5h7PGXG86xkLQUj-zOftDXfXeFOzN/view)
