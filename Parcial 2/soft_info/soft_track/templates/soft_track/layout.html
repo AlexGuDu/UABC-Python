@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/css/materialize.min.css">
+     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <title>Sci Papers</title>
+  </head>
+  <body>
+    <nav>
+   <div class="nav-wrapper light-blue lighten-1">
+     <a href={% url 'soft_track:index' %} class="brand-logo">&nbsp;Soft Info</a>
+     <ul id="nav-mobile" class="right hide-on-med-and-down">
+       
+     </ul>
+   </div>
+ </nav>
+    <header class="container center-align">
+      <h1 class="center-align light-blue lighten-4" style="border-radius: 50px; padding: 10px;">Soft Info</h1>
+    </header>
+
+
+    <div class="container">
+      {% block content %}
+      {% endblock %}
+      <br><br>
+
+
+    </div>
+  </body>
+</html>
+.

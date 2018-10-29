@@ -1,0 +1,18 @@
+{% extends 'soft_track/layout.html' %}
+
+{% block content %}
+<h3 class="center-align red lighten-5" style="border-radius: 50px; padding: 10px;">New Department</h3>
+
+<div class="card">
+  <div class="card-content">
+    <form method="POST">
+      {% csrf_token %}
+      {{form.as_p}}
+      <br>
+      <input class="waves-effect waves-light btn" type="submit" name="create" value="Submit Paper">
+    </form>
+  </div>
+
+</div>
+<a href="/soft_track" class="btn">Go back to Latest Papers</a>
+{% endblock %}

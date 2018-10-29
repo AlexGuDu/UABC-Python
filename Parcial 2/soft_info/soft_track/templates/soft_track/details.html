@@ -1,0 +1,15 @@
+{% extends 'soft_track/layout.html' %}
+
+{% block content %}
+<h3 class="center-align yellow lighten-3" style="border-radius: 50px; padding: 10px;">{{swpkg.title}}</h3>
+
+<div class="card">
+  <div class="card-content">
+    <label>Description: </label> {{swpkg.description}}
+  </div>
+  <div class="card-action">
+    <label>Department: </label> {{swpkg.dept}}
+  </div>
+</div>
+<a href="/soft_track" class="btn">Go back to All Software</a>
+{% endblock %}
