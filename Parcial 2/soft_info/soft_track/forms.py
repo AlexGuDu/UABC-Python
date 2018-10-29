@@ -1,6 +1,10 @@
 from django import forms
 from .models import SwPackage, Dept
 
+class SwForm(forms.ModelForm):
+    class Meta:
+        model = SwPackage
+        fields = ["title", "description", "dept"]
 
 class RawSwForm(forms.Form):
     categories = [

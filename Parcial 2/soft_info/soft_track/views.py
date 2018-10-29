@@ -16,6 +16,18 @@ def index(request):
 
     return render(request, 'soft_track/index.html', context)
 
+def index_filter(request, name):
+    spec_pkgs = SwPackage.objects.filter(dept=name)
+
+    context = {
+        'title': name+" Software",
+        'swpkgs': spec_pkgs
+    }
+
+    return render(request, 'soft_track/index.html', context)
+
+
+
 
 
 def details(request, id):

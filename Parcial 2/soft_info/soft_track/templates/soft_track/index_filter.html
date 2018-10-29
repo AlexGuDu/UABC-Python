@@ -1,0 +1,17 @@
+{% extends 'soft_track/layout.html' %}
+
+{% block content %}
+
+<ul class="collection with-header">
+  <li class="collection-header grey lighten-3"><h4>{{title}}</h4></li>
+  {% for swpkg in swpkgs %}
+    <li class="collection-item"><a class="collection-item" href="/soft_track/details/{{swpkg.id}}">{{swpkg.title}}<label style="float:right;">{{swpkg.dept}}</label> </a></li>
+  {% endfor %}
+</ul>
+<br>
+<div class="row "><div class="col s5 "><a style="display:block" class="center-align waves-effect waves-light btn col s6" href="/newsw">New Software</a></div></div>
+<div class="row"><div class="col s5 "><a style="display:block" class="center-align waves-effect waves-light btn col s6" href="/newdept">New Department</a></div></div>
+<div class="row"><div class="col s1"><a style="display:block" class="center-align" href="/admin">Admin Login</a></div>
+</div>
+
+{% endblock %}
