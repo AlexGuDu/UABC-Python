@@ -12,16 +12,15 @@
   </div> <br>
 
   <div class="container-fluid">
+    <div class="list-group">
+      {% for complaint in complaints %}
+        <a href="#" class="list-group-item list-group-item-action">
+          {{complaint.title}}
+        </a>
+      {% endfor %}
 
-  
-
+    </div>
   </div>
-
-
-
-
-
-
 
 
 {% endblock %}

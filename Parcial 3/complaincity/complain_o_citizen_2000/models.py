@@ -8,6 +8,7 @@ class User(models.Model):
 class BigComplaint(models.Model):
     title = models.CharField(max_length=50)
     body = models.TextField(default='empty')
+    type_complaint = models.IntegerField()
     user = models.ForeignKey(User, on_delete=models.CASCADE)
 
 class MiniComplaint(models.Model):

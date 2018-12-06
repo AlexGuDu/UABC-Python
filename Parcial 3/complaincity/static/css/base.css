@@ -4,3 +4,22 @@
   background-image: linear-gradient(to right bottom,rgba(255, 255, 255, 0.8),rgba(255, 252, 181, 0.8)), url(../img/jumbotronbg.jpg);
   box-shadow: 0 0.5rem 1rem rgba(50,50,50,0.3);
 }
+
+body{
+  background-color: #612c2a;
+  background-image: url(../img/fullbg.png);
+/* This is mostly intended for prototyping; please download the pattern and re-host for production environments. Thank you! */
+}
+
+.card{
+  border-radius: 1rem;
+  box-shadow: 0 1rem 2rem rgba(50,50,50,0.3);
+}
+
+#base-navbar{
+  box-shadow: 0 1rem 2rem rgba(50,50,50,0.3);
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 4;
+}
