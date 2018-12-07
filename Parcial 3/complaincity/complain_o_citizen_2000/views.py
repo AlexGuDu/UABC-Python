@@ -138,3 +138,35 @@ def submit_complaint(request):
             user_id = by_user.id,
         )
         return HttpResponse('')
+
+def submit_minicomplaint(request):
+    if request.method == 'POST':
+        body = request.POST['body']
+        bigcomplaint_id = request.POST['bigcomplaint_id']
+        by_user = User.objects.get(username=request.session['username'])
+
+
+        MiniComplaint.objects.create(
+            body = body,
+            bigcomplaint_id = bigcomplaint_id,
+            user_id = by_user.id,
+        )
+        return HttpResponse('')
+
+def thumbup(request):
+    if request.method == 'POST':
+        bigcomplaint_id = request.POST['bigcomplaint_id']
+
+        votes = BigComplaint.objects.get(id=bigcomplaint_id).upvotes
+        BigComplaint.objects.filter(id=bigcomplaint_id).update(upvotes = (votes + 1))
+
+        return HttpResponse('')
+
+def thumbdown(request):
+    if request.method == 'POST':
+        bigcomplaint_id = request.POST['bigcomplaint_id']
+
+        votes = BigComplaint.objects.get(id=bigcomplaint_id).downvotes
+        BigComplaint.objects.filter(id=bigcomplaint_id).update(downvotes = (votes + 1))
+
+        return HttpResponse('')

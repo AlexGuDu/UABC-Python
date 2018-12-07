@@ -7,7 +7,7 @@
         <div class="container" style="text-align:center;">
           <br>
           <h1>{{title}}</h1>
-          <a class="btn btn-danger fas fa-comments" data-toggle="collapse" href="#collapsingForm" role="button" aria-expanded="false" aria-controls="collapseExample" style="font-size: 1.5rem; padding: 1rem; margin-top:0.35rem;"></a> <br> <br>
+          <a id="showform" class="btn btn-danger fas fa-comments" data-toggle="collapse" href="#collapsingForm" role="button" aria-expanded="false" aria-controls="collapseExample" style="font-size: 1.5rem; padding: 1rem; margin-top:0.35rem;"></a> <br> <br>
 
             <div class="collapse" id="collapsingForm">
               <div class="wrapper_complaint" style="height:10rem; width: 50%; display: inline-block;">
@@ -34,7 +34,7 @@
           <h1>Nobody has complained yet! <img id="think" src="{% static 'img/huh.png' %}" alt=""></h1>
           <p class="text-danger">You could be the first!</p>
           <div class="float-right">
-            <button class="btn btn-danger" type="button" name="button"><i class="far fa-comment-dots"></i> Be the first to complain! </button>
+            <button id="secondary_openform" class="btn btn-danger" type="button" name="button"><i class="far fa-comment-dots"></i> Be the first to complain! </button>
           </div>
 
         {% endif %}
@@ -54,6 +54,11 @@
   </div>
 
   <script type="text/javascript">
+    $(document).on('click', '#secondary_openform', function(e){
+      e.preventDefault();
+      $('#showform').click();
+    })
+
     $(document).on('click', '#submit_complaint_btn', function(e){
       e.preventDefault();
       var title = document.getElementById('input_complaint_title').value

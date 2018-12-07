@@ -53,15 +53,80 @@
             <div class="card-body">
               <h5>Complain about this complaint:</h5>
               <div class="input-group inpt-grpt" style="height:7rem;">
-                <textarea id="complaint_textarea" class="form-control" aria-label="With textarea"></textarea>
+                <textarea id="minicomplaint_textarea" class="form-control" aria-label="With textarea"></textarea>
                 <div class="input-group-append">
-                  <button class="btn btn-outline-danger type="button" id="send_question"><div class="far fa-tired""></div></button>
+                  <button class="btn btn-outline-danger type="button" id="submit_minicomplaint_btn"><div class="far fa-tired""></div></button>
                 </div>
               </div>
             </div>
           </div>
         </div>
       </div>
+
+      <script type="text/javascript">
+
+        $(document).on('click', '#btn_minicomplain', function(e){
+          e.preventDefault();
+          document.getElementById('minicomplaint_textarea').scrollIntoView({behaviour: 'smooth'});
+        })
+
+        $(document).on('click', '#submit_minicomplaint_btn', function(e){
+          e.preventDefault();
+          var minicomplaint = document.getElementById('minicomplaint_textarea').value
+
+          if (minicomplaint_textarea=="") {
+            console.log('waitaminute')
+          }
+          else{
+            $.ajax({
+              type: 'POST',
+              url: '{% url 'submit_minicomplaint' %}',
+              data:{
+                body: $('#minicomplaint_textarea').val(),
+                bigcomplaint_id: {{complaint.id}},
+              },
+              success: function(){
+                document.location.reload(true);
+              }
+            })
+          }
+        });
+
+        $(document).on('click', '#thumbup', function(e){
+          e.preventDefault();
+
+          $.ajax({
+            type: 'POST',
+            url: '{% url 'thumbup' %}',
+            data:{
+              bigcomplaint_id: {{complaint.id}}
+            },
+            success: function(){
+              console.log('got here')
+              document.location.reload(true);
+            }
+          })
+
+        });
+
+        $(document).on('click', '#thumbdown', function(e){
+          e.preventDefault();
+
+          $.ajax({
+            type: 'POST',
+            url: '{% url 'thumbdown' %}',
+            data:{
+              bigcomplaint_id: {{complaint.id}}
+            },
+            success: function(){
+              console.log('got here')
+              document.location.reload(true);
+            }
+          })
+
+        });
+
+      </script>
 
 
 

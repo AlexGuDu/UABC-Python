@@ -16,13 +16,13 @@
 
     <div class="row indexrow">
       <div class="col-sm-12">
-        <div class="card">
+        <div class="card index-card">
           <div class="card-header">
-            Total Complaints: <label class="complaint-counter">{{ all_counts.0 }}</label>
+            Total Complaints: <label class="complaint-counter badge badge-pill badge-danger">{{ all_counts.0 }}</label>
           </div>
-          <div class="card-body">
-            <h5 class="card-title">Good Examples</h5>
-            <p class="card-text">Help us try and find how to become better examples for each other as citizens.</p>
+          <div id="card_type_1" class="card-body">
+            <h5 class="card-title card-make-bold">Good Examples</h5>
+            <p class="card-text card-make-bold">Help us try and find how to become better examples for each other as citizens.</p>
             <div class="float-right">
               <a href="{% url 'type_complaint' id=1 %}" class="btn btn-danger">Get complaining! <div class="fas fa-bullhorn"></div></a>
             </div>
@@ -32,13 +32,13 @@
     </div><br>
     <div class="row indexrow">
       <div class="col-sm-12">
-        <div class="card">
+        <div class="card index-card">
           <div class="card-header">
-            Total Complaints: <label class="complaint-counter">{{ all_counts.1 }}</label>
+            Total Complaints: <label class="complaint-counter badge badge-pill badge-danger">{{ all_counts.1 }}</label>
           </div>
-          <div class="card-body">
-            <h5 class="card-title">Urbanism & Transport</h5>
-            <p class="card-text">Stuck in traffic? Garbage truck late again? Feel that gentrification crawling closer? This is the place for you.</p>
+          <div id="card_type_2" class="card-body">
+            <h5 class="card-title card-make-bold">Urbanism & Transport</h5>
+            <p class="card-text card-make-bold">Stuck in traffic? Garbage truck late again? Feel that gentrification crawling closer? This is the place for you.</p>
             <div class="float-right">
               <a href="{% url 'type_complaint' id=2 %}" class="btn btn-danger">Get complaining! <div class="fas fa-bullhorn"></div></a>
             </div>
@@ -48,13 +48,13 @@
     </div> <br>
     <div class="row indexrow">
       <div class="col-sm-12">
-        <div class="card">
+        <div class="card index-card">
           <div class="card-header">
-            Total Complaints: <label class="complaint-counter">{{ all_counts.2 }}</label>
+            Total Complaints: <label class="complaint-counter badge badge-pill badge-danger">{{ all_counts.2 }}</label>
           </div>
-          <div class="card-body">
-            <h5 class="card-title">Business</h5>
-            <p class="card-text">If you feel like your local businessman is getting too many breaks or perhaps not enough, we welcome you to give us your most passionate complaint.</p>
+          <div id="card_type_3" class="card-body">
+            <h5 class="card-title card-make-bold">Business</h5>
+            <p class="card-text card-make-bold">If you feel like your local businessman is getting too many breaks or perhaps not enough, we welcome you to give us your most passionate complaint.</p>
             <div class="float-right">
               <a href="{% url 'type_complaint' id=3 %}" class="btn btn-danger">Get complaining! <div class="fas fa-bullhorn"></div></a>
             </div>
@@ -64,13 +64,13 @@
     </div> <br>
     <div class="row indexrow">
       <div class="col-sm-12">
-        <div class="card">
+        <div class="card index-card">
           <div class="card-header">
-            Total Complaints: <label class="complaint-counter">{{ all_counts.3 }}</label>
+            Total Complaints: <label class="complaint-counter badge badge-pill badge-danger">{{ all_counts.3 }}</label>
           </div>
-          <div class="card-body">
-            <h5 class="card-title">Social Matters</h5>
-            <p class="card-text">Let loose, the sky is the limit. Let us know what you think of the most trivial thing you can find out there in the internet.</p>
+          <div id="card_type_4" class="card-body">
+            <h5 class="card-title card-make-bold">Social Matters</h5>
+            <p class="card-text card-make-bold">Let loose, the sky is the limit. Let us know what you think of the most trivial thing you can find out there in the internet.</p>
             <div class="float-right">
               <a href="{% url 'type_complaint' id=4 %}" class="btn btn-danger">Get complaining! <div class="fas fa-bullhorn"></div></a>
             </div>
@@ -80,13 +80,13 @@
     </div> <br>
     <div class="row indexrow">
       <div class="col-sm-12">
-        <div class="card">
+        <div class="card index-card">
           <div class="card-header">
-            Total Complaints: <label class="complaint-counter">{{ all_counts.4 }}</label>
+            Total Complaints: <label class="complaint-counter badge badge-pill badge-danger">{{ all_counts.4 }}</label>
           </div>
-          <div class="card-body">
-            <h5 class="card-title">Government</h5>
-            <p class="card-text">We appreciate you.</p>
+          <div id="card_type_5" class="card-body">
+            <h5 class="card-title card-make-bold">Government</h5>
+            <p class="card-text card-make-bold">We appreciate you.</p>
             <div class="float-right">
               <a href="{% url 'type_complaint' id=5 %}" class="btn btn-danger">Get complaining! <div class="fas fa-bullhorn"></div></a>
             </div>
@@ -97,13 +97,13 @@
     <br>
     <div class="row indexrow" style="margin-bottom:5rem;">
       <div class="col-sm-12">
-        <div class="card">
+        <div  class="card index-card">
           <div class="card-header">
-            Total Complaints: <label class="complaint-counter">{{ all_counts.5 }}</label>
+            Total Complaints: <label class="complaint-counter badge badge-pill badge-danger">{{ all_counts.5 }}</label>
           </div>
-          <div class="card-body">
-            <h5 class="card-title">Social Communities and Lost Items</h5>
-            <p class="card-text">Come here and have a chat about services done to the community and also I guess ask about lost stuff.</p>
+          <div id="card_type_6"class="card-body">
+            <h5 class="card-title card-make-bold">Social Communities and Lost Items</h5>
+            <p class="card-text card-make-bold">Come here and have a chat about services done to the community and also I guess ask about lost stuff.</p>
             <div class="float-right">
               <a href="{% url 'type_complaint' id=6 %}" class="btn btn-danger">Get complaining! <div class="fas fa-bullhorn"></div></a>
             </div>

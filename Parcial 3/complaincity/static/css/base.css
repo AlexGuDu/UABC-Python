@@ -10,10 +10,63 @@ body{
   background-image: url(../img/fullbg.png);
 /* This is mostly intended for prototyping; please download the pattern and re-host for production environments. Thank you! */
 }
+#card_type_1{
+  background-image: linear-gradient(to right bottom,rgba(255, 255, 255, 0.7),rgba(211, 27, 27, 0.4)), url(../img/type1.jpg);
+  height: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+#card_type_2{
+  background-image: linear-gradient(to right bottom,rgba(255, 255, 255, 0.7),rgba(211, 27, 27, 0.4)), url(../img/type2.jpg);
+  height: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+#card_type_3{
+  background-image: linear-gradient(to right bottom,rgba(255, 255, 255, 0.7),rgba(211, 27, 27, 0.4)), url(../img/type3.jpg);
+  height: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+#card_type_4{
+  background-image: linear-gradient(to right bottom,rgba(255, 255, 255, 0.7),rgba(211, 27, 27, 0.4)), url(../img/type4.png);
+  height: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+#card_type_5{
+  background-image: linear-gradient(to right bottom,rgba(255, 255, 255, 0.7),rgba(211, 27, 27, 0.5)), url(../img/type5.jpg);
+  height: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+#card_type_6{
+  background-image: linear-gradient(to right bottom,rgba(255, 255, 255, 0.7),rgba(211, 27, 27, 0.5)), url(../img/type6.jpg);
+  height: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
 
 .card{
   border-radius: 1rem;
   box-shadow: 0 1rem 2rem rgba(50,50,50,0.3);
+}
+
+.index-card{
+  border-top-left-radius: 1rem;
+  border-top-right-radius: 1rem;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+.card-make-bold{
+  font-weight: bold;
 }
 
 .indexrow{
