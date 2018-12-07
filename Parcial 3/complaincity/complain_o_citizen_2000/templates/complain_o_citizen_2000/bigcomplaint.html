@@ -1,0 +1,68 @@
+{% extends 'complain_o_citizen_2000/base.html' %}
+
+{% block content %}
+
+<div class="container-fluid" style="margin-top:6.5rem; margin-bottom:3.5rem;">
+  <div class="row">
+    <div class="col-sm-12">
+      <div class="card bg-danger details-card">
+        <div class="card-header complaint-card-header">
+            <span style="font-size: 2.5rem; font-weight: bold;">{{ complaint.title.capitalize }}</span>
+          <div class="float-right"> <i>{{complaint.by_username}} </i>- {{complaint.date}}</div>
+        </div>
+        <div class="card-body bg-light">
+            <p>{{complaint.body}}</p>
+            <div class="bottomrow">
+              <div class="float-left detailsthumbs">
+                <i id="thumbup" class="far fa-thumbs-up " ></i><span class="span-upvotes"> {{complaint.upvotes}}</span>
+                <i id="thumbdown" class="far fa-thumbs-down" style="margin-left: 0.3rem;"></i><span class="span-downvotes"> {{complaint.downvotes}}</span>
+              </div>
+              <div class="float-right">
+                <footer><button id="btn_minicomplain" class="btn btn-danger" type="button" name="button">Complain about this!</button></footer>
+              </div>
+            </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+  <div class="container-fluid">
+    <h3 id="title_minicomplaints"><b>MiniComplaints</b></h3>
+    {% for minicomplaint in minicomplaints %}
+    <div class="row" style="margin-bottom:2.5rem;">
+      <div class="col-sm-12">
+        <div class="card ">
+          <div class="card-body">
+              <p>{{minicomplaint.body}}</p>
+              <div class="float-right">
+                <i>{{minicomplaint.by_username}} </i>- {{minicomplaint.date}}
+              </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+
+  <div class="container-fluid" style="margin-bottom: 2.5rem;">
+      <div class="row">
+        <div class="col-sm-12">
+          <div class="card">
+            <div class="card-body">
+              <h5>Complain about this complaint:</h5>
+              <div class="input-group inpt-grpt" style="height:7rem;">
+                <textarea id="complaint_textarea" class="form-control" aria-label="With textarea"></textarea>
+                <div class="input-group-append">
+                  <button class="btn btn-outline-danger type="button" id="send_question"><div class="far fa-tired""></div></button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+
+{% endblock %}

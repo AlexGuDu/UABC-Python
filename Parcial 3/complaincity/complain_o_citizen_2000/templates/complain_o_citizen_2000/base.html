@@ -33,9 +33,22 @@
               Categories
             </a>
             <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-              <a class="dropdown-item" href>element</a>
-              <a class="dropdown-item" href>element</a>
-              <a class="dropdown-item" href>element</a>
+              <a class="dropdown-item" href="{% url 'type_complaint' id=1 %}">Good examples</a>
+              <a class="dropdown-item" href="{% url 'type_complaint' id=2 %}">Urbanism & Transport</a>
+              <a class="dropdown-item" href="{% url 'type_complaint' id=3 %}">Business</a>
+              <a class="dropdown-item" href="{% url 'type_complaint' id=4 %}">Social Matters</a>
+              <a class="dropdown-item" href="{% url 'type_complaint' id=5 %}">Government</a>
+              <a class="dropdown-item" href="{% url 'type_complaint' id=6 %}">Social Communities and Lost Items</a>
+            </div>
+          </li>
+        </ul>
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item active dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="color:white;">
+              {{user}}
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+              <a class="dropdown-item" href="{% url 'logout' %}">Logout</a>
             </div>
           </li>
         </ul>

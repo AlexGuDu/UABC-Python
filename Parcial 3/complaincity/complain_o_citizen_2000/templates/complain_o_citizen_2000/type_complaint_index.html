@@ -1,25 +1,50 @@
 {% extends 'complain_o_citizen_2000/base.html' %}
 {% load staticfiles %}
 
+
 {% block content %}
   <div class="jumbotron jumbotron-fluid text-center bg-default">
-        <div class="container">
-          <h1>Welcome to ComplainCity</h1>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-          <a id="begin_anchor" href class="btn btn-dark ">Comenzar &nbsp; <div class="fas fa-flag-checkered"></div></a>
+        <div class="container" style="text-align:center;">
+          <br>
+          <h1>{{title}}</h1>
+          <a class="btn btn-danger fas fa-comments" data-toggle="collapse" href="#collapsingForm" role="button" aria-expanded="false" aria-controls="collapseExample" style="font-size: 1.5rem; padding: 1rem; margin-top:0.35rem;"></a> <br> <br>
 
+            <div class="collapse" id="collapsingForm">
+              <div class="wrapper_complaint" style="height:10rem; width: 50%; display: inline-block;">
+                <form>
+                  <div class="form-group">
+                    <label><b>Title</b></label>
+                    <input id="input_complaint_title"  class="form-control" placeholder="Give your complaint a title.">
+
+                  </div>
+                  <label><b>Description</b></label>
+                  <textarea id="input_complaint_body" class="form-control" aria-label="With textarea" placeholder="Describe the complaint to us."></textarea><br>
+                  <button id="submit_complaint_btn" class="btn btn-danger" type="button" name="button">Submit Complaint</button>
+                </form>
+
+              </div>
+            </div>
         </div>
   </div> <br>
 
   <div class="container-fluid" style="margin-bottom: 5rem;">
     <div class="card">
       <div class="card-body">
+        {% if did_they_complain == False %}
+          <h1>Nobody has complained yet! <img id="think" src="{% static 'img/huh.png' %}" alt=""></h1>
+          <p class="text-danger">You could be the first!</p>
+          <div class="float-right">
+            <button class="btn btn-danger" type="button" name="button"><i class="far fa-comment-dots"></i> Be the first to complain! </button>
+          </div>
+
+        {% endif %}
         <div class="list-group">
           {% for complaint in complaints %}
-            <a href="#" id="list-item-id" class="list-group-item list-group-item-action ripple">
+            <a href="{% url 'bigcomplaint' id=complaint.id %}" id="list-item-id" class="list-group-item list-group-item-action shine">
                <label class="thumbs-group"><i class="far fa-thumbs-up" ></i><span class="span-upvotes"> {{complaint.upvotes}}</span>
                 <i class="far fa-thumbs-down" style="margin-left: 0.3rem;"></i><span class="span-downvotes"> {{complaint.downvotes}}</span></label>  {{complaint.title.capitalize}}<label class="short-body">&mdash; {{complaint.body}}</label>
-                <div class="float-right by-who" > <i> {{complaint.by_username}} </i> <label class="post-time">- {{complaint.date}}</label> </div>
+                <div class="float-right by-who" > <i> {{complaint.by_username}} </i> <label class="post-time">- {{complaint.date}}</label> <span class="badge badge-pill"><i class="fas fa-comments"></i> {{complaint.reply_count}} </span> </div>
+
              </a>
           {% endfor %}
         </div>
@@ -27,6 +52,34 @@
     </div>
 
   </div>
+
+  <script type="text/javascript">
+    $(document).on('click', '#submit_complaint_btn', function(e){
+      e.preventDefault();
+      var title = document.getElementById('input_complaint_title').value
+      var body = document.getElementById('input_complaint_body').value
+
+      if (title=="" || body=="") {
+        console.log('waitaminute')
+      }
+      else{
+        $.ajax({
+          type: 'POST',
+          url: '{% url 'submit_complaint' %}',
+          data:{
+            title: $('#input_complaint_title').val(),
+            body: $('#input_complaint_body').val(),
+            type_id: {{type_id}},
+          },
+          success: function(){
+            document.location.reload(true);
+          }
+        })
+      }
+
+    });
+
+  </script>
 
 
 {% endblock %}

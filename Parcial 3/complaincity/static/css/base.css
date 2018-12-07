@@ -20,6 +20,10 @@ body{
   margin-bottom: 1rem;
 }
 
+.btn-danger{
+  border-radius: 0.7rem;
+}
+
 #list-item-id{
   border-radius: 1rem;
   box-shadow: 0 1rem 2rem rgba(50,50,50,0.3);
@@ -37,28 +41,21 @@ body{
   z-index: 4;
 }
 
-/* Ripple effect */
-.ripple {
+.shine {
   background-position: center;
   transition: background 0.8s;
 }
-.ripple:hover {
+.shine:hover {
   background: #ff706b radial-gradient(circle, transparent 0.5%, #ff706b 1%) center/15000%;
   color: white;
 }
 
-.ripple:hover > .by-who, .ripple:hover > .short-body, .ripple:hover .post-time{
+.shine:hover > .by-who, .shine:hover > .short-body, .shine:hover .post-time{
   color: white;
 }
 
-.ripple:hover .span-upvotes, .ripple:hover .span-downvotes{
+.shine:hover .span-upvotes, .shine:hover .span-downvotes{
   color: white;
-}
-
-.ripple:active {
-  background-color: #f43f38;
-  background-size: 100%;
-  transition: background 0s;
 }
 
 .short-body{
@@ -76,6 +73,10 @@ body{
   color:grey;
 }
 
+.details-card{
+  box-shadow: 0 1rem 2rem rgba(0,0,0,0.5);
+}
+
 .thumbs-group{
   margin-right: 0.5rem;
 }
@@ -86,4 +87,72 @@ body{
 
 .span-downvotes{
   color: #f44e42;
+}
+
+#think{
+  margin-top: -0.5rem;
+  height: 2rem;
+}
+
+
+.complaint-card-header{
+  color: white;
+}
+
+.detailsthumbs{
+  font-size: 1.2rem;
+}
+
+.bottomrow{
+  margin-top: 2.25rem;
+}
+
+#thumbup{
+  cursor: pointer;
+}
+
+#thumbup:hover{
+  color: green;
+  animation: hoverthumb 0.35s;
+  font-size: 1.5rem;
+}
+
+#thumbdown{
+  cursor: pointer;
+}
+
+#thumbdown:hover{
+  color: red;
+  animation: hoverthumb 0.35s;
+  font-size: 1.5rem;
+}
+
+#title_minicomplaints{
+  color: white;
+  text-shadow: 0 1rem 2rem rgba(0,0,0,1);
+}
+
+textarea{
+   resize: none;
+ }
+
+ .inpt-grpt{
+   box-shadow: 0 0 1rem rgba(0, 0, 0, 0.1);
+ }
+
+
+.form-control:focus {
+  border-color: #fc4a44 !important;
+  box-shadow: 0 0 5px rgba(252, 74, 68, 1) !important;
+}
+
+
+@keyframes hoverthumb {
+  0% {
+    font-size: 1.2rem;
+  }
+
+  100%{
+    font-size: 1.5rem;
+  }
 }

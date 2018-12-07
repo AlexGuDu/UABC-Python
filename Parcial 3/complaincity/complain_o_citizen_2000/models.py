@@ -17,5 +17,6 @@ class BigComplaint(models.Model):
 
 class MiniComplaint(models.Model):
     body = models.TextField(default='empty')
+    date = models.DateTimeField(default=datetime.now, blank=True)
     bigcomplaint = models.ForeignKey(BigComplaint, on_delete=models.CASCADE)
     user = models.ForeignKey(User, on_delete=models.CASCADE)
