@@ -11,15 +11,21 @@
         </div>
   </div> <br>
 
-  <div class="container-fluid">
-    <div class="list-group">
-      {% for complaint in complaints %}
-        <a href="#" class="list-group-item list-group-item-action">
-          {{complaint.title}}
-        </a>
-      {% endfor %}
-
+  <div class="container-fluid" style="margin-bottom: 5rem;">
+    <div class="card">
+      <div class="card-body">
+        <div class="list-group">
+          {% for complaint in complaints %}
+            <a href="#" id="list-item-id" class="list-group-item list-group-item-action ripple">
+               <label class="thumbs-group"><i class="far fa-thumbs-up" ></i><span class="span-upvotes"> {{complaint.upvotes}}</span>
+                <i class="far fa-thumbs-down" style="margin-left: 0.3rem;"></i><span class="span-downvotes"> {{complaint.downvotes}}</span></label>  {{complaint.title.capitalize}}<label class="short-body">&mdash; {{complaint.body}}</label>
+                <div class="float-right by-who" > <i> {{complaint.by_username}} </i> <label class="post-time">- {{complaint.date}}</label> </div>
+             </a>
+          {% endfor %}
+        </div>
+      </div>
     </div>
+
   </div>
 
 

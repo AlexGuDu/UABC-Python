@@ -16,10 +16,74 @@ body{
   box-shadow: 0 1rem 2rem rgba(50,50,50,0.3);
 }
 
+.indexrow{
+  margin-bottom: 1rem;
+}
+
+#list-item-id{
+  border-radius: 1rem;
+  box-shadow: 0 1rem 2rem rgba(50,50,50,0.3);
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+
 #base-navbar{
   box-shadow: 0 1rem 2rem rgba(50,50,50,0.3);
   position: fixed;
   top: 0;
   width: 100%;
   z-index: 4;
+}
+
+/* Ripple effect */
+.ripple {
+  background-position: center;
+  transition: background 0.8s;
+}
+.ripple:hover {
+  background: #ff706b radial-gradient(circle, transparent 0.5%, #ff706b 1%) center/15000%;
+  color: white;
+}
+
+.ripple:hover > .by-who, .ripple:hover > .short-body, .ripple:hover .post-time{
+  color: white;
+}
+
+.ripple:hover .span-upvotes, .ripple:hover .span-downvotes{
+  color: white;
+}
+
+.ripple:active {
+  background-color: #f43f38;
+  background-size: 100%;
+  transition: background 0s;
+}
+
+.short-body{
+  margin-left: 1rem;
+  font-size: .80rem;
+  color: grey;
+}
+
+.by-who{
+  color: #dd4f4f;
+}
+
+.post-time{
+  font-size: 0.80rem;
+  color:grey;
+}
+
+.thumbs-group{
+  margin-right: 0.5rem;
+}
+
+.span-upvotes{
+  color: green;
+}
+
+.span-downvotes{
+  color: #f44e42;
 }
