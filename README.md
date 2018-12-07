@@ -20,3 +20,9 @@
 
 <b>Examen #2</b>
 - [Tabla de Categorias para Problema #1 de Examen #2](https://drive.google.com/file/d/1nDX5h7PGXG86xkLQUj-zOftDXfXeFOzN/view)
+
+<b>Tercer Parcial</b>   
+- [APIs](https://drive.google.com/file/d/1FYdgGy65ZAd4jW1PBq6jdjVVXJ1L5VtA/view)
+- [RESTful Framework](https://drive.google.com/file/d/1EhpR1pd1Nkk4sFIp9qhK7R6i9rDJl4Zn/view)
+- [Web Services](https://drive.google.com/file/d/15sWn4rqwh6EOqxcQoXyVtOj0qXez0tUc/view)
+- [Instalacion Django REST Framework](https://drive.google.com/file/d/1BRLHUo9ciLvbAz1OEcNt3TBHTLzwk441/view)
